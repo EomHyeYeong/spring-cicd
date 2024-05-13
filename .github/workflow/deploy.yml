@@ -2,9 +2,9 @@ name: Java Ci With Gradle
 
 on:                         # 트리거
   push:
-    branches: [ "master" ]  # master branch에 push할 때
+    branches: [ "main" ]  # master branch에 push할 때
   pull_request:
-    branches: [ "master" ]  # master branch에 PR 올릴 때
+    branches: [ "main" ]  # master branch에 PR 올릴 때
 
 permissions: write-all
 
