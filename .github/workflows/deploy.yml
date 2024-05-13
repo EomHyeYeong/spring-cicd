@@ -61,7 +61,7 @@ jobs:
 
       - name: jar 파일 실행
         run: |
-          ssh -o StrictHostKeyChecking=no ${{ secrets.DEVELOP_USERNAME }}@${{ secrets.DEVELOP_HOST }} << EOF
+          ssh -t StrictHostKeyChecking=no ${{ secrets.DEVELOP_USERNAME }}@${{ secrets.DEVELOP_HOST }} << EOF
             pkill -f 'test-cicd-0.0.1-SNAPSHOT.jar' || true
             cd ~/app/spring-cicd
             nohup java -jar -Dspring.profiles.active=develop test-cicd-0.0.1-SNAPSHOT.jar > app.log 2>&1 &
